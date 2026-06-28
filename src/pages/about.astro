@@ -1,4 +1,7 @@
 ---
+import { uppercase } from "astro:schema";
+import '../styles/global.css';
+import Navigation from "../components/Navigation.astro";
 const pagetitle = "Sobre Mim";
 const identify = {
   firstName: "Henrique",
@@ -18,6 +21,9 @@ const skills = [
 const happy = true;
 const finished = false;
 const goal = 3;
+const skillColor = "navy";
+const fontWeight = "700";
+const textCase = "uppercase";
 ---
 
 <html lang="pt-br">
@@ -27,12 +33,11 @@ const goal = 3;
     <link rel="icon" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
+    
     <title>{pagetitle}</title>
   </head>
   <body>
-    <a href="/">Início</a>
-    <a href="/about">Sobre</a>
-    <a href="/blog">Blog</a>
+        <Navigation/>
 
     <h1>{pagetitle}</h1>
     <h2>
@@ -67,7 +72,7 @@ const goal = 3;
     </ul>
     <p>Minhas habilidades são:</p>
     <ul>
-      {skills.map((habilidade) => <li>{habilidade}</li>)}
+      {skills.map((habilidade) => <li class="skill">{habilidade}</li>)}
     </ul>
 
     {happy && <p>Estou feliz em estar aprendendo Astro!</p>}
