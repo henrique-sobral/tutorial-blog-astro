@@ -9,7 +9,7 @@ const allPosts = Object.values(import.meta.glob('./posts/*.md', { eager: true })
 ---
 <BaseLayout pageTitle={pageTitle}>
     <p>Aqui é onde postarei sobre minha jornada aprendendo Astro.</p>
-    <ul>
+    <ul class="blog-itens">
       {allPosts.map((post: any) => <BlogPost url={post.file.split('/pages')[1].replace('.md', '')} title={post.frontmatter.title} />)}
     </ul>
 </BaseLayout>

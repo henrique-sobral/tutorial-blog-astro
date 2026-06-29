@@ -1,7 +1,7 @@
-html, body {
+html,
+body {
   min-height: 100%;
-  background-color: #f1f5f9;
-  font-family: sans-serif;
+  font-family: "Manrope", sans-serif;
 }
 
 body {
@@ -21,33 +21,127 @@ h1 {
   margin: 1rem 0;
   font-size: 2.5rem;
 }
-#header{
+#header {
   display: flex;
   justify-content: center;
   gap: 20px;
   background-color: #1c7dfc;
-
 }
-#header li a, #header li{
+#header li a,
+#header li {
   list-style: none;
   text-decoration: none;
   color: black;
   font-weight: 600;
 }
-footer{
+img{
+  border-radius: 120px;
+}
+button{
+  all: unset;
+  padding: 10px 20px;
+  border-radius: 50px;
+  background-color: #4c1d95;
+  color: white;
+  font-weight: 600;
+}
+button:hover{
+  cursor: pointer;
+  text-decoration: underline;
+}
+.blog-itens{
+  padding: 0;
+}
+.blog-item{
+  max-width: fit-content;
+  list-style: none;
+  transition: 0.3s ease;
+}
+.blog-item:hover{
+  background-color: #e7eef8;
+  border-radius: 50px;
+  transform: translateX(20px);
+}
+.dark .blog-item:hover{
+  background-color: #fff;
+}
+.blog-item a:before{
+  content: "⤀";
+  color: #1c7dfc;
+  margin-right: .5rem;
+}
+.dark   .blog-item a{
+  color: #1c7dfc;
+}
+.blog-item a{
+  color: #111111;
+  display: inline-block;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+.tag a {
+    display: inline-block;
+    color: #0a418a;
+    text-decoration: none;
+    padding: 0.5em 1em;
+  }
+  .tag a:hover{
+    text-decoration: underline;
+  }
+  .tags {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  .tag{
+    margin: 0.25em;
+    border-radius: 50px;
+    font-size: 1.15em;
+    background-color: #f1f6fd;
+  }
+footer {
   text-align: center;
   background-color: #1c7dfc;
   font-weight: 600;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+  border-radius: 50px;
+  margin-top: 2rem;
+  padding: 0.25rem 0.50rem;
+}
+footer p{
+  padding-left: 0.5rem;
+  
+}
+footer p a{
+  color: rgb(0, 255, 255);
+  text-decoration: none;
+}
+footer p a:hover{
+  text-decoration: underline;
+}
+footer div a{
+  border-radius: 50px;
+  margin: 0.2rem;
+  
+}
+footer div a:hover{
+  text-decoration: underline;
 }
 /* estilos da navegação */
 /* estilos da navegação */
 .menu {
-  background-color: #0d0950;
+  background-color: #111111;
   border: none;
   color: #fff;
   font-size: 1.2rem;
   font-weight: bold;
   padding: 5px 10px;
+}
+#main-menu {
+  display: flex;
+  justify-content: center;
 }
 
 .nav-links {
@@ -59,21 +153,38 @@ footer{
 .nav-links a {
   display: block;
   text-align: center;
-  padding: 10px 0;
+  border-radius: 50px;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
-  text-transform: uppercase;
-  color: #0d0950;
+  color: #111111;
 }
 
 .nav-links a:hover,
-.nav-links a:focus{
-  background-color: #ff9776;
+.nav-links a:focus {
+  background-color: #1c7dfc;
 }
 
 :has(.menu[aria-expanded="true"]) .nav-links {
   display: unset;
+}
+html.dark {
+  background-color: #111111;
+  color: #fff;
+}
+
+.dark .menu {
+  background-color: #fff;
+  color: #000;
+}
+
+.dark .nav-links a:hover,
+.dark .nav-links a:focus {
+  color: #111111;
+}
+
+.dark .nav-links a {
+  color: #fff;
 }
 
 @media screen and (min-width: 636px) {
@@ -87,7 +198,7 @@ footer{
 
   .nav-links a {
     display: inline-block;
-    padding: 15px 20px;
+    padding: 15px 30px;
   }
 
   .menu {
@@ -104,7 +215,6 @@ footer{
 .nav-links a {
   display: block;
   text-align: center;
-  padding: 10px 0;
   text-decoration: none;
   font-size: 1.2rem;
   font-weight: bold;
@@ -114,7 +224,7 @@ footer{
 
 .nav-links a:hover,
 .nav-links a:focus {
-  background-color: #ff9776;
+  background-color: #1c7dfc;
 }
 
 @media screen and (min-width: 636px) {
@@ -126,8 +236,9 @@ footer{
     background: none;
   }
 
+
   .nav-links a {
     display: inline-block;
-    padding: 15px 20px;
+    padding: 15px 30px;
   }
 }

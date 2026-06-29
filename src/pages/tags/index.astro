@@ -1,0 +1,26 @@
+---
+import BaseLayout from "../../layouts/BaseLayout.astro";
+import "../../styles/global.css";
+
+const pageTitle = "Índice de Tags";
+
+const postFiles = import.meta.glob("../posts/*.md", { eager: true });
+const allPosts = Object.values(postFiles);
+
+const tags = [
+  ...new Set(
+    allPosts.flatMap((post) => post.frontmatter?.tags ?? [])
+  ),
+];
+---
+
+
+<BaseLayout pageTitle={pageTitle}>
+  <div class="tags">
+    {tags.map((tag) => (
+      <p class="tag">
+        <a href={`/tags/${tag}`}>{tag}</a>
+      </p>
+    ))}
+  </div>
+</BaseLayout>
