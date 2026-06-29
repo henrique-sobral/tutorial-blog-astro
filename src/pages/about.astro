@@ -1,7 +1,8 @@
 ---
-import { uppercase } from "astro:schema";
-import '../styles/global.css';
-import Navigation from "../components/Navigation.astro";
+import BaseLayout from "../layouts/BaseLayout.astro";
+
+import "../styles/global.css";
+
 const pagetitle = "Sobre Mim";
 const identify = {
   firstName: "Henrique",
@@ -26,20 +27,7 @@ const fontWeight = "700";
 const textCase = "uppercase";
 ---
 
-<html lang="pt-br">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-    <link rel="icon" href="/favicon.ico" />
-    <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    
-    <title>{pagetitle}</title>
-  </head>
-  <body>
-        <Navigation/>
-
-    <h1>{pagetitle}</h1>
+<BaseLayout pageTitle={pagetitle}>
     <h2>
       Este projeto tem como finalidade de aprender a estrutura do framework
       Astro.
@@ -86,5 +74,4 @@ const textCase = "uppercase";
         <p>Minha meta não é em 3 dias.</p>
       )
     }
-  </body>
-</html>
+</BaseLayout>

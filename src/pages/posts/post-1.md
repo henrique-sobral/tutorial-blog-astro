@@ -1,6 +1,7 @@
----
+﻿---
+layout: ../../layouts/MarkdownPostLayout.astro
 title: 'Minha Primeira Postagem no Blog'
-pubDate: 28-06-2026
+pubDate: '28-06-2026'
 description: 'Esta é a primeira postagem do meu novo blog Astro.'
 author: 'Aluno de Astro'
 image:
@@ -8,11 +9,6 @@ image:
     alt: 'Logo Astro em fundo escuro com brilho rosa.'
 tags: ["astro", "blogueirando", "aprendendo em público"]
 ---
-# Minha Primeira Postagem no Blog
-
-Publicado em: 28-06-2026
-
-Bem-vindo ao meu _novo blog_ sobre aprendendo Astro! Aqui, eu irei compartilhar minha jornada de aprendizado enquanto eu construo um novo website.
 
 ## O que eu realizei
 
